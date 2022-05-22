@@ -1,0 +1,114 @@
+.header {
+ text-align: center;
+}
+
+ .box {
+
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+
+ }
+
+ .box ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  border: solid 1px yellow;
+  border-radius: 20px;
+  margin-left: 8%;
+  margin-right: 8%;
+  padding:2%
+  
+ }
+
+
+.game-container {
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  width: 50vw;
+  margin-left: 8%;
+  align-self: center;
+  
+
+}
+
+.game-container img {
+  width:200px;
+  height:250px;
+  border: solid 1px;
+  color: yellow;
+  animation-name: card-animation;
+  animation-duration: 1s;
+  
+}
+
+.game-container img:hover {
+  background-color: rgb(134, 16, 16);
+  cursor: pointer;
+}
+
+.result {
+  width:500px;
+  height:350px;
+  top: 42%;
+  left: 36%;
+  background-color: red;
+  position: absolute;
+  border-radius: 3px;
+  opacity: 50%;
+  text-align: center;
+  font-size: 80px;
+  
+  
+  justify-content: center;
+ 
+  padding: 1%;
+}
+
+.result p {
+  background-color: red;
+  opacity: 100%;  
+  
+}
+
+.result p:hover {
+  background-color: yellow;
+  color:red;
+  cursor: pointer;
+  opacity: 50%;
+  
+}
+
+
+@media only screen and (max-width: 1550px) {
+  .game-container {
+    grid-template-columns: repeat(4, auto);
+    margin-left: 18%;    
+  }
+
+  .result {
+    left:30%
+  }
+}
+
+@media only screen and (max-width:1000px){
+  .game-container{
+  margin-left: 10%; 
+  }
+  .result {
+    left:5%
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+    
+  }
+}
+
+@keyframes card-animation {
+  from {opacity:0%;}
+  to {opacity: 100%;}
+}
